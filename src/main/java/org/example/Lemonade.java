@@ -46,6 +46,13 @@ public class Lemonade {
         this.ice = ice;
     }
 
+    public static Lemonade mix(Lemonade lemonade1, Lemonade lemonade2) {
+        int totalLemons = lemonade1.getLemons() + lemonade2.getLemons();
+        int totalSugar = lemonade1.getSugar() + lemonade2.getSugar();
+        int totalIce = lemonade1.getIce() + lemonade2.getIce();
+
+        return new Lemonade(totalLemons, totalSugar, totalIce);
+    }
     // Create a method called mix that takes two Lemonade objects and returns a new Lemonade object with
     // the sum of the lemons, sugar, and ice from the two Lemonade objects.
     //
